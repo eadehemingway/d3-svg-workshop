@@ -4,6 +4,8 @@ This workshop is in two sections, section one is a code along, section two is ex
 
 ## code along
 
+clone the repo and _do not look in the solutions file_
+
 ### Step One - append svg
 
 ```js
