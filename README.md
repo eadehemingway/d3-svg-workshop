@@ -23,7 +23,6 @@ talking points:
 
 - select and append create /change the selection (i.e. what the code after it applies to. so here we select the div with id = 'chart', then we append the svg and this moves the selection onto the svg, so when we set the width and height that is applied to the svg)
 - we try to avoid magic numbers so create variables for width and height
-- console.log(svg) at this point to show what it gives
 
 ### Step Two - add a bottom line
 
