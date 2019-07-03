@@ -3,7 +3,7 @@ const svgWidth = 800;
 const svgHeight = 400;
 const circleRadius = 30;
 const bottomLineWidth = 5;
-
+const rectHeight = 40;
 const svg = d3
   .select('#chart')
   .append('svg')
@@ -35,7 +35,7 @@ svg
   .append('rect')
   .attr('x', 500)
   .attr('y', bottomLine - rectHeight - bottomLineWidth / 2)
-  .attr('width', 40)
+  .attr('width', 10)
   .attr('height', rectHeight)
   .attr('fill', 'red');
 
@@ -65,4 +65,4 @@ setTimeout(() => {
     .attr('transform', 'translate(0, 100)')
     .duration(2000)
     .ease(d3.easeElastic);
-}, 500);
+}, 1000);
