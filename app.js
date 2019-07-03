@@ -1,14 +1,12 @@
-const bottomLine = 300;
 const svgWidth = 800;
 const svgHeight = 400;
-const circleRadius = 30;
-const bottomLineWidth = 5;
-const rectHeight = 40;
 const svg = d3
   .select('#chart')
   .append('svg')
   .attr('width', svgWidth)
   .attr('height', svgHeight);
+const bottomLine = 300;
+const bottomLineWidth = 5;
 svg
   .append('line')
   .attr('x1', 0)
@@ -18,6 +16,7 @@ svg
   .attr('stroke', 'black')
   .attr('stroke-width', bottomLineWidth);
 
+const circleRadius = 30;
 const circleborder = 10;
 svg
   .append('circle')
@@ -31,6 +30,7 @@ svg
   .attr('stroke', 'orange')
   .attr('stroke-width', circleborder);
 
+const rectHeight = 40;
 svg
   .append('rect')
   .attr('x', 500)
@@ -50,11 +50,11 @@ groupOne
   .attr('height', 40)
   .attr('stroke', 'blue')
   .attr('fill', 'none');
-
+const textPadding = 15;
 groupOne
   .append('text')
   .text('i am great')
-  .attr('x', boxX)
+  .attr('x', boxX + textPadding)
   .attr('y', bottomLine - rectHeight / 2)
   .attr('fill', 'coral')
   .attr('font-family', 'sans-serif');
@@ -62,7 +62,7 @@ groupOne
 setTimeout(() => {
   groupOne
     .transition()
-    .attr('transform', 'translate(0, 100)')
     .duration(2000)
-    .ease(d3.easeElastic);
+    .ease(d3.easeElastic)
+    .attr('transform', 'translate(0, 100)');
 }, 1000);

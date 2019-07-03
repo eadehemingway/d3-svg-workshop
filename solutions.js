@@ -1,14 +1,12 @@
-const bottomLine = 300;
 const svgWidth = 800;
 const svgHeight = 400;
-const circleRadius = 30;
-const bottomLineWidth = 5;
-
 const svg = d3
   .select('#chart')
   .append('svg')
   .attr('width', svgWidth)
   .attr('height', svgHeight);
+const bottomLine = 300;
+const bottomLineWidth = 5;
 svg
   .append('line')
   .attr('x1', 0)
@@ -18,6 +16,7 @@ svg
   .attr('stroke', 'black')
   .attr('stroke-width', bottomLineWidth);
 
+const circleRadius = 30;
 const circleborder = 10;
 svg
   .append('circle')
@@ -51,11 +50,11 @@ groupOne
   .attr('height', 40)
   .attr('stroke', 'blue')
   .attr('fill', 'none');
-
+const textPadding = 15;
 groupOne
   .append('text')
   .text('i am great')
-  .attr('x', boxX)
+  .attr('x', boxX + textPadding)
   .attr('y', bottomLine - rectHeight / 2)
   .attr('fill', 'coral')
   .attr('font-family', 'sans-serif');
@@ -63,7 +62,16 @@ groupOne
 setTimeout(() => {
   groupOne
     .transition()
-    .attr('transform', 'translate(0, 100)')
     .duration(2000)
-    .ease(d3.easeElastic);
-}, 500);
+    .ease(d3.easeElastic)
+    .attr('transform', 'translate(0, 100)');
+}, 1000);
+
+// NOTES
+
+// - transition always comes after the selection and before the code that changes it
+// - ease() and duration() go anywhere after transition()
+// - how to know what is selected ?
+// if in doubt console.log and you can see. but as a rule select and append create a selection/change a selection,
+// .attr /.style (stuff that changes the selection) just passes the selection on.
+// enter() exit() do other stuff they pass the selection on but they do it for each item, we will talk more about this later
