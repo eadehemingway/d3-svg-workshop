@@ -1,5 +1,7 @@
 # D3 workshop - part 0 - svg's
 
+![](./svg-gif.gif)
+
 This workshop is in two sections, section one is a code along, section two is exercises for the students to do in pairs.
 
 ## code along
