@@ -81,13 +81,13 @@ there is still an overlap because the bottomLine value refers to the center of t
 
 **note**: when it says 'on the bottom line', it wants the shape to be sat on the line with no overlap
 
-1. Add a 6px orange border to the circle and make it so that it is still on the bottom line. hint: borders are half on inside and half on outside of shape.
+1. Add a 10px orange border to the circle and make it so that it is still on the bottom line. hint: borders are half on inside and half on outside of shape.
 2. Add a small red rectangle to the bottom line (x: 500, width: 10, height: 40)
 3. Add a group to the svg with a class of 'group-1' (it will be invisible so check the elements tab to check you have successfully added it)
-4. Add a rectangle with no fill and a blue border to this group and put it on the bottom line (width:100 height:40 x:300 )
-5. Now add text inside groupOne saying 'i am great', position the text so that it is inside the blue box and style it so that it is color:coral and font:sans-serif
 
-6. Now without touching the code you have already written move groupOne to be below the bottomline (hint: you cannot give group elements x and y coordinates)
+4. We now need to add a rectangle to this group. To do this we must first select the group and then append to it. The rectangle should have no fill and a blue border, with attributes: (width:100 height:40 x:300 ). Put this rectangle on the bottom line
+5. We now want to add text to the group, again we will first have to select the group and append to it. We want the text to say 'i am great', position the text so that it is inside the blue box and style it so that it is color:coral and font:sans-serif
+6. Now we want to move the group down below the line, at the bottom of the grey box. Do this without editing the y coordinates of the text and rectangle. (hint: you cannot give group elements x and y coordinates)
 7. Wrap the code you wrote for question 7 in a setTimeout with a delay of 1000ms so you can see it move
 
 ### If you have time:
